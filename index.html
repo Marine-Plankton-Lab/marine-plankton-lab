@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Security Headers for GitHub Pages -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Marine Plankton Lab | PKNU</title>
+  <meta name="description"
+    content="Marine Plankton Lab at Pukyong National University — studying marine parasitic protists, protist community structure, and harmful algal blooms in Korean coastal waters." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-brand">
+      <div class="nav-logo-icon">
+        <img src="images/대지 1.png" alt="MPL Logo">
+      </div>
+      <div class="nav-brand-text">
+        <h1>Marine Plankton Lab</h1>
+        <span>Marine Plankton Biology · PKNU</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="pages/projects.html">Projects</a></li>
+      <li><a href="pages/publications.html">Publications</a></li>
+      <li><a href="pages/members.html">Members</a></li>
+      <li><a href="pages/equipment.html">Equipment</a></li>
+      <li><a href="pages/gallery.html">Gallery</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-particles" id="particles"></div>
+
+    <!-- Organism silhouettes background -->
+    <div class="hero-organisms" aria-hidden="true">
+      <div class="org org-1">🦠</div>
+      <div class="org org-2">🌀</div>
+      <div class="org org-3">🧫</div>
+      <div class="org org-4">🔬</div>
+      <div class="org org-5">🦠</div>
+      <div class="org org-6">🌊</div>
+    </div>
+
+    <!-- Background Image -->
+    <div class="hero-visual fade-in">
+      <img src="images/hero_cover.jpg" alt="Pristine Deep Ocean Water">
+    </div>
+
+    <!-- Plankton Canvas Background -->
+    <div class="hero-canvas-wrapper fade-in" style="transition-delay: .2s;">
+      <canvas id="plankton-canvas"></canvas>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <div class="hero-badge">📍 Pukyong National University · Dept. of Oceanography · Busan, Korea</div>
+        <h1 class="hero-title">
+          <span class="ko">해양부유생물학연구실</span>
+          Marine Plankton Lab
+        </h1>
+        <p class="hero-subtitle">
+          Investigating the hidden world of <strong style="color:var(--accent2)">marine phytoplankton</strong> and
+          <strong style="color:var(--accent2)">marine parasitic protists</strong> — uncovering their diversity,
+          ecological functions, and roles in shaping ocean food webs.
+        </p>
+        <div class="hero-keywords">
+          <div class="hero-kw-row">
+            <span class="hero-kw">🦠 Parasitic Protists</span>
+            <span class="hero-kw">🌀 Dinoflagellates</span>
+            <span class="hero-kw">🟤 Diatom</span>
+            <span class="hero-kw">🚨 HABs</span>
+          </div>
+          <div class="hero-kw-row">
+            <span class="hero-kw">🧬 Metagenomics</span>
+            <span class="hero-kw">🔬 Microscopy</span>
+            <span class="hero-kw">🌊 Protist Community Structure</span>
+          </div>
+        </div>
+        <div class="hero-stats-mini">
+          <div class="hsm-item" style="cursor:pointer;" onclick="location.href='pages/publications.html'"><span class="hsm-num">36</span><span class="hsm-lbl">Publications</span></div>
+          <div class="hsm-divider"></div>
+          <div class="hsm-item" style="cursor:pointer;" onclick="location.href='pages/projects.html'"><span class="hsm-num">7+</span><span class="hsm-lbl">NRF Projects</span></div>
+          <div class="hsm-divider"></div>
+          <div class="hsm-item" style="cursor:pointer;" onclick="location.href='pages/awards.html'"><span class="hsm-num">8</span><span class="hsm-lbl">Awards</span></div>
+        </div>
+        <div class="hero-actions">
+          <a href="#research" class="btn-primary">🔬 Research Areas</a>
+          <a href="pages/publications.html" class="btn-outline">📄 Publications</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,55 C240,95 480,15 720,55 C960,95 1200,15 1440,55 L1440,110 L0,110 Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats-bar" id="stats">
+    <div class="stats-grid">
+      <div class="stat-item fade-in" style="cursor:pointer;" onclick="location.href='pages/publications.html'">
+        <div class="stat-value"><span class="count" data-target="36">0</span><span class="stat-unit">+</span></div>
+        <div class="stat-label">Peer-reviewed Publications</div>
+      </div>
+      <div class="stat-item fade-in" style="transition-delay:.1s; cursor:pointer;" onclick="location.href='pages/projects.html'">
+        <div class="stat-value"><span class="count" data-target="7">0</span><span class="stat-unit">+</span></div>
+        <div class="stat-label">NRF Research Projects</div>
+      </div>
+      <div class="stat-item fade-in" style="transition-delay:.2s">
+        <div class="stat-value"><span class="count" data-target="27">0</span><span class="stat-unit">+</span></div>
+        <div class="stat-label">Years of Research</div>
+      </div>
+      <div class="stat-item fade-in" style="transition-delay:.3s; cursor:pointer;" onclick="location.href='pages/awards.html'">
+        <div class="stat-value"><span class="count" data-target="8">0</span></div>
+        <div class="stat-label">Awards</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about-section" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-card fade-in">
+          <div class="about-card-tag">Marine Biological Oceanography</div>
+          <h3>Unraveling Hidden Life in the Ocean</h3>
+          <p>
+            Marine Plankton Lab focuses on the diversity, ecological function, and biological interactions of marine
+            microorganisms and protists — particularly parasitic protists infecting dinoflagellates and diatoms,
+            and mixotrophic dinoflagellates that occupy critical positions in the marine microbial food web.
+          </p>
+          <div class="about-topics">
+            <span class="about-topic">Parasitic nanoflagellates</span>
+            <span class="about-topic"><i>Amoebophrya</i></span>
+            <span class="about-topic"><i>Euduboscquella</i></span>
+            <span class="about-topic"><i>Pirsonia</i></span>
+            <span class="about-topic"><i>Pseudopirsonia</i></span>
+            <span class="about-topic">Protist community structure</span>
+            <span class="about-topic">HABs biocontrol</span>
+          </div>
+        </div>
+        <div class="about-text fade-in" style="transition-delay:.15s">
+          <h2>Who We Are</h2>
+          <p>
+            Marine Plankton Lab at Pukyong National University's Department of Oceanography conducts in-depth research
+            in biological oceanography — specifically the diversity, ecological roles, and molecular biology of
+            marine microorganisms and protists.
+          </p>
+          <p>
+            Our research targets parasitic protists found in Korean coastal waters, including novel parasitic
+            nanoflagellates, and examines how these parasites infect dinoflagellates and diatoms, influence dissolved
+            organic carbon (DOC) production, and regulate harmful algal blooms. We integrate
+            <strong>metagenomics, molecular phylogenetics, and microscopy</strong>
+            to reveal infection mechanisms and energy cycling roles of these cryptic organisms.
+          </p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">🧬</div>
+              <div>
+                <div class="pillar-label">Metagenomics & eDNA</div>
+                <div class="pillar-sub">NGS-based diversity analysis</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🔭</div>
+              <div>
+                <div class="pillar-label">Morphological Study</div>
+                <div class="pillar-sub">Electron & light microscopy</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🌊</div>
+              <div>
+                <div class="pillar-label">Field Sampling</div>
+                <div class="pillar-sub">Korean coastal monitoring</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🧪</div>
+              <div>
+                <div class="pillar-label">Culture Experiments</div>
+                <div class="pillar-sub">Growth & feeding physiology</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH ===================== -->
+  <section class="research-section" id="research">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Research Areas</div>
+        <h2 class="section-title">What We Study</h2>
+        <p class="section-desc">Three core research pillars drive our investigative agenda in marine microbial ecology
+          and biological oceanography</p>
+      </div>
+      <div class="research-grid research-grid-3">
+        <div class="research-card fade-in">
+          <div class="rc-header">
+            <div class="rc-num">Research Area 01</div>
+            <div class="rc-icon">🦠</div>
+            <div class="rc-title">Diversity & Ecological Functions of Marine Parasitic Protists</div>
+          </div>
+          <div class="rc-body">
+            <p class="rc-desc">
+              We investigate the diversity and ecological roles of parasitic protists — especially those infecting
+              dinoflagellates and diatoms in Korean coastal waters. We have characterized newly discovered parasitic
+              nanoflagellates (<em><i>Amoebophrya</i></em>, <em><i>Euduboscquella</i></em>, <em><i>Pirsonia</i></em>,
+              <em><i>Pseudopirsonia</i></em>) via morphology
+              and molecular phylogenetics. We analyze how parasites regulate HAB species such as
+              <em>Cochlodinium polykrikoides</em> and <em>Akashiwo sanguinea</em>, and how infection drives dissolved
+              organic carbon (DOC) production and restructures marine microbial communities.
+              Methods include metagenomics, qPCR, single-cell PCR, phylogenetics, and electron microscopy.
+            </p>
+            <div class="rc-tags">
+              <span class="rc-tag"><i>Amoebophrya</i></span>
+              <span class="rc-tag"><i>Euduboscquella</i></span>
+              <span class="rc-tag"><i>Pirsonia</i></span>
+              <span class="rc-tag"><i>Pseudopirsonia</i></span>
+              <span class="rc-tag">HAB biocontrol</span>
+              <span class="rc-tag">DOC cycling</span>
+              <span class="rc-tag">Metagenomics</span>
+            </div>
+          </div>
+        </div>
+        <div class="research-card fade-in" style="transition-delay:.1s">
+          <div class="rc-header">
+            <div class="rc-num">Research Area 02</div>
+            <div class="rc-icon" style="font-size:0;">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+                <rect x="4" y="20" width="40" height="8" rx="3" fill="#023E8A" opacity="0.12" />
+                <!-- DNA double helix bars -->
+                <rect x="6" y="10" width="8" height="5" rx="2" fill="#0096C7" />
+                <rect x="34" y="10" width="8" height="5" rx="2" fill="#90E0EF" />
+                <line x1="14" y1="12" x2="34" y2="12" stroke="#48cae4" stroke-width="1.5" stroke-dasharray="3 2" />
+                <rect x="10" y="20" width="8" height="5" rx="2" fill="#00B4D8" />
+                <rect x="30" y="20" width="8" height="5" rx="2" fill="#0096C7" />
+                <line x1="18" y1="22" x2="30" y2="22" stroke="#48cae4" stroke-width="1.5" stroke-dasharray="3 2" />
+                <rect x="6" y="30" width="8" height="5" rx="2" fill="#90E0EF" />
+                <rect x="34" y="30" width="8" height="5" rx="2" fill="#023E8A" />
+                <line x1="14" y1="32" x2="34" y2="32" stroke="#48cae4" stroke-width="1.5" stroke-dasharray="3 2" />
+                <!-- Backbone lines -->
+                <path d="M10,12 Q8,22 10,32" fill="none" stroke="#0096C7" stroke-width="2" stroke-linecap="round" />
+                <path d="M38,12 Q40,22 38,32" fill="none" stroke="#90E0EF" stroke-width="2" stroke-linecap="round" />
+                <!-- Sequencing wave at bottom -->
+                <polyline points="6,42 12,38 18,44 24,38 30,44 36,38 42,42" fill="none" stroke="#00B4D8"
+                  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="rc-title">Protist Community Structure in the Southeastern Sea of Korea</div>
+          </div>
+          <div class="rc-body">
+            <p class="rc-desc">
+              We conduct systematic surveys of protist community composition and seasonal dynamics in the
+              southeastern sea of Korea — including the South Sea and Korea Strait — using both morphological
+              identification and molecular approaches. Our research documents the spatial and temporal distribution
+              of phototrophic, heterotrophic, and mixotrophic protists (dinoflagellates, ciliates, diatoms, and
+              nanoflagellates), revealing how oceanographic conditions (water temperature, salinity, nutrients,
+              currents) shape community structure. These data form a critical baseline for understanding
+              ecosystem change and the spread of harmful species in Korean coastal waters.
+            </p>
+            <div class="rc-tags">
+              <span class="rc-tag">Protist diversity</span>
+              <span class="rc-tag">Community structure</span>
+              <span class="rc-tag">Seasonal dynamics</span>
+              <span class="rc-tag">Korea Strait</span>
+              <span class="rc-tag">Diatom</span>
+              <span class="rc-tag">18S rRNA</span>
+              <span class="rc-tag">eDNA</span>
+            </div>
+          </div>
+        </div>
+        <div class="research-card fade-in" style="transition-delay:.2s">
+          <div class="rc-header">
+            <div class="rc-num">Research Area 03</div>
+            <div class="rc-icon">🚨</div>
+            <div class="rc-title">Harmful Algal Blooms (HABs) — Detection, Ecology & Biocontrol</div>
+          </div>
+          <div class="rc-body">
+            <p class="rc-desc">
+              Harmful algal blooms (HABs) pose major threats to marine ecosystems and aquaculture industries
+              along the Korean coast. We study the ecology, toxin production, and bloom dynamics of key
+              HAB-forming species — including <em><i>Cochlodinium polykrikoides</i></em>, <em><i>Alexandrium</i></em>
+              spp.,
+              <em><i>Karenia</i></em> spp., and <em><i>Dinophysis</i></em> spp. Using quantitative PCR (qPCR), multiplex
+              detection assays, and field monitoring, we develop rapid molecular tools for early warning
+              and species discrimination. We also investigate the role of parasitic protists
+              (e.g., <em><i>Amoebophrya</i></em>) as natural biocontrol agents that terminate bloom events,
+              and how environmental factors drive bloom initiation and collapse.
+            </p>
+            <div class="rc-tags">
+              <span class="rc-tag">Cochlodinium</span>
+              <span class="rc-tag">Alexandrium</span>
+              <span class="rc-tag">Karenia</span>
+              <span class="rc-tag">Paralytic shellfish toxins</span>
+              <span class="rc-tag">qPCR detection</span>
+              <span class="rc-tag">Biocontrol</span>
+              <span class="rc-tag">Bloom dynamics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Jump Links -->
+      <div class="category-jump-links fade-in"
+        style="text-align:center; margin-top: 50px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="pages/projects.html" class="btn-outline-primary">📊 Projects</a>
+        <a href="pages/publications.html" class="btn-outline-primary">📄 Publications</a>
+        <a href="pages/members.html" class="btn-outline-primary">👥 Members</a>
+        <a href="pages/equipment.html" class="btn-outline-primary">🔬 Equipment</a>
+        <a href="pages/gallery.html" class="btn-outline-primary">🖼️ Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+
+  <section id="contact" style="background: var(--white); padding: 100px 5%;">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Contact</div>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-desc">For research collaborations, graduate admissions, or other inquiries</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:18px;" class="fade-in">
+          <div class="contact-card">
+            <div style="font-size:1.8rem;">📧</div>
+            <div>
+              <h4>Email</h4>
+              <a href="#" class="em-lock" data-em="c3Vua2ltQHBrbnUuYWMua3I=" style="color:var(--teal); font-size:1rem;"></a>
+              <p style="color:var(--text-light); font-size:0.83rem; margin-top:4px;">For research inquiries and
+                collaboration</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div style="font-size:1.8rem;">📞</div>
+            <div>
+              <h4>Phone / Fax</h4>
+              <p style="color:var(--text-mid); font-size:0.95rem;">Tel: <span class="enc-text" data-val="KzgyLTUxLTYyOS02NTc3"></span><br>Fax: <span class="enc-text" data-val="KzgyLTUxLTYyOS02NTY4"></span></p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div style="font-size:1.8rem;">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p style="color:var(--text-mid); line-height:1.8; font-size:0.95rem;">
+                Room 317, Marine Joint Research Building (C13)<br>
+                Department of Oceanography<br>
+                Pukyong National University<br>
+                45 Yongso-ro, Nam-gu, Busan 48513, Republic of Korea
+              </p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div style="font-size:1.8rem;">🎓</div>
+            <div>
+              <h4>Graduate Admissions</h4>
+              <p style="color:var(--text-mid); line-height:1.8; font-size:0.95rem;">
+                We welcome motivated M.S./Ph.D. applicants with interest in marine microbial ecology, protistology, and
+                oceanography.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in" style="transition-delay:.15s;">
+          <div class="contact-map-card">
+            <div style="font-size:60px; position:relative; z-index:1;">🗺️</div>
+            <h3>Pukyong National University<br>Daeyeon Campus</h3>
+            <p style="opacity:.78; font-size:0.9rem; line-height:1.7; position:relative; z-index:1;">
+              45 Yongso-ro, Nam-gu, Busan 48513<br>
+              Busan Subway Line 2, Kyungsung Univ.·Pukyong Nat'l Univ. Station <br /> (~10 min walk)
+            </p>
+            <a href="https://www.pknu.ac.kr" target="_blank" class="contact-map-btn">PKNU Official Website →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div style="max-width:1280px; margin:0 auto;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+            <div
+              style="width:60px; height:60px; background:white; border-radius:12px; display:flex; align-items:center; justify-content:center; overflow:hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); flex-shrink:0;">
+              <img src="images/대지 1.png" alt="MPL Logo" style="width:100%; height:100%; object-fit:contain;">
+            </div>
+            <div>
+              <h3>Marine Plankton Lab</h3>
+              <div class="fb-en">Marine Plankton Biology · PKNU</div>
+            </div>
+          </div>
+          <p>Dept. of Oceanography, Pukyong National University — studying marine protist diversity, ecological
+            function, and biological interactions in Korean coastal waters.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Lab</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="pages/members.html">Members</a></li>
+            <li><a href="pages/equipment.html">Lab Equipment</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Research</h4>
+          <ul>
+            <li><a href="#research">Research Areas</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="pages/publications.html">Full Publication List</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#" class="em-lock" data-em="c3Vua2ltQHBrbnUuYWMua3I=" style="color:var(--teal); font-size:1rem;"></a></li>
+            <li><a href="#" class="enc-link" data-prefix="tel:" data-val="KzgyNTE2Mjk2NTc3" data-text="KzgyLTUxLTYyOS02NTc3"></a></li>
+            <li><a href="https://www.pknu.ac.kr" target="_blank">PKNU Website</a></li>
+            <li><a href="https://app.rndcircle.io/lab/45056e42-fcaa-4c90-a55e-70f5f94de7d1" target="_blank">RnDCircle
+                Profile</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Marine Plankton Lab · Marine Plankton Biology · Pukyong National University. All rights
+          reserved.</span>
+        <span>Busan, Republic of Korea</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

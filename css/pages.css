@@ -1,0 +1,124 @@
+/* ============================================================
+   Sub-pages CSS — Marine Plankton Lab
+   ============================================================ */
+
+/* ---- Page Hero ---- */
+.page-hero {
+  min-height: 280px;
+  background: linear-gradient(160deg, #010d1a 0%, #012a4a 50%, #0096c7 100%);
+  display: flex; align-items: flex-end;
+  padding: 110px 5% 56px;
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(0,180,216,0.18) 0%, transparent 60%);
+}
+.page-hero-content { max-width: 1280px; width: 100%; margin: 0 auto; color: white; position: relative; z-index: 1; }
+.page-hero-content h1 { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; font-family: 'Outfit', sans-serif; margin-bottom: 8px; }
+.page-hero-content .section-tag { color: #90e0ef; -webkit-text-fill-color: #90e0ef; margin-bottom: 10px; }
+.page-hero-content p { font-size: 1rem; color: rgba(255,255,255,0.72); }
+
+/* ---- Page main ---- */
+.page-main { padding: 80px 5%; background: var(--surface); min-height: 60vh; }
+.page-inner { max-width: 1280px; margin: 0 auto; }
+
+/* ---- Members ---- */
+.members-cat-title {
+  font-size: 1.2rem; font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif;
+  margin-bottom: 24px; padding-bottom: 10px; border-bottom: 2px solid rgba(0,62,138,0.10);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.members-grid { display: grid; gap: 20px; }
+.members-grid-3 { grid-template-columns: repeat(3,1fr); }
+.members-grid-1 { grid-template-columns: 1fr; max-width: 680px; }
+@media (max-width: 768px) { .members-grid-3 { grid-template-columns: 1fr; } }
+
+.member-card {
+  background: var(--white); border-radius: var(--radius); padding: 28px 24px;
+  border: 1px solid rgba(0,62,138,0.07); transition: var(--transition); text-align: center;
+}
+.member-card:hover { transform: translateY(-5px); box-shadow: var(--card-shadow); }
+.member-card-lead { display: flex; align-items: center; gap: 32px; text-align: left; padding: 32px 36px; }
+.member-avatar {
+  font-size: 2.6rem; width: 68px; height: 68px;
+  background: var(--surface); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; border: 2px solid rgba(0,62,138,0.10);
+  margin: 0 auto 14px;
+}
+.member-avatar-lg { width: 96px; height: 96px; font-size: 3.2rem; margin: 0; flex-shrink: 0; }
+.member-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+.member-role { color: var(--primary); font-weight: 600; font-size: 0.87rem; margin-bottom: 2px; }
+.member-role-en { color: var(--text-light); font-size: 0.8rem; margin-bottom: 10px; }
+.member-contacts { display: flex; flex-direction: column; gap: 4px; font-size: 0.83rem; color: var(--text-mid); margin-bottom: 10px; }
+.member-desc { font-size: 0.86rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 10px; }
+
+/* Member photo placeholder */
+.member-photo-wrap { margin: 0 auto 16px; width: 100px; height: 100px; }
+.member-photo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(0,62,138,0.12); }
+.member-photo-placeholder {
+  width: 100px; height: 100px; border-radius: 50%;
+  background: var(--surface); border: 2px dashed rgba(0,62,138,0.25);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-size: 0.68rem; color: var(--text-light); text-align: center; line-height: 1.4;
+  cursor: default;
+}
+.member-photo-placeholder .photo-icon { font-size: 1.5rem; margin-bottom: 4px; }
+.member-photo-placeholder small { font-size: 0.63rem; color: rgba(0,62,138,0.35); word-break: break-all; }
+.member-photo-placeholder:hover { border-color: var(--teal); background: rgba(0,180,216,0.05); }
+.member-badge {
+  display: inline-block; background: rgba(0,62,138,0.07); color: var(--primary);
+  border-radius: 12px; padding: 3px 11px; font-size: 0.75rem; font-weight: 600;
+  margin-bottom: 10px; font-family: 'Outfit', sans-serif;
+}
+.member-contact-row {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  font-size: 0.78rem; color: var(--text-light); margin-top: 8px; flex-wrap: wrap;
+}
+
+/* ---- Alumni table ---- */
+.alumni-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid rgba(0,62,138,0.09); }
+.alumni-table { width: 100%; border-collapse: collapse; background: white; font-size: 0.9rem; }
+.alumni-table thead { background: linear-gradient(135deg, var(--primary), var(--deep)); color: white; }
+.alumni-table th { padding: 15px 20px; text-align: left; font-size: 0.83rem; font-weight: 600; font-family: 'Outfit', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; }
+.alumni-table td { padding: 13px 20px; border-bottom: 1px solid rgba(0,62,138,0.06); color: var(--text-mid); }
+.alumni-table tr:last-child td { border-bottom: none; }
+.alumni-table tbody tr:hover { background: var(--surface); }
+.badge-phd, .badge-ms {
+  padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; font-family: 'Outfit', sans-serif;
+}
+.badge-phd { background: rgba(0,62,138,0.09); color: var(--primary); }
+.badge-ms { background: rgba(0,150,199,0.09); color: var(--teal); }
+
+/* ---- Publications page ---- */
+.pub-filter-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+.pub-filter-btn {
+  padding: 8px 20px; border-radius: 24px; border: 2px solid rgba(0,62,138,0.14);
+  background: white; color: var(--text-mid); font-size: 0.87rem; font-weight: 600;
+  cursor: pointer; transition: var(--transition); font-family: 'Outfit', sans-serif;
+}
+.pub-filter-btn:hover, .pub-filter-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+.pub-year-group { margin-bottom: 44px; }
+.pub-year-header {
+  font-size: 1.2rem; font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif;
+  margin-bottom: 16px; display: flex; align-items: center; gap: 12px; padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0,62,138,0.09);
+}
+.pub-year-header::after { content: ''; flex: 1; height: 2px; background: rgba(0,62,138,0.06); }
+.pub-item {
+  background: white; border-radius: var(--radius-sm);
+  padding: 20px 24px; margin-bottom: 12px;
+  border: 1px solid rgba(0,62,138,0.07); border-left: 4px solid var(--primary);
+  transition: var(--transition);
+}
+.pub-item:hover { transform: translateX(5px); box-shadow: var(--card-shadow); }
+.pub-item-title { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; line-height: 1.5; }
+.pub-item-authors { font-size: 0.82rem; color: var(--text-mid); margin-bottom: 5px; }
+.pub-item-authors strong { color: var(--primary); }
+.pub-item-journal { font-size: 0.82rem; color: var(--text-light); font-style: italic; }
+.pub-badge {
+  display: inline-block; background: rgba(0,150,199,0.1); color: var(--teal);
+  padding: 2px 9px; border-radius: 12px; font-size: 0.72rem; font-weight: 700;
+  margin-left: 8px; font-style: normal; font-family: 'Outfit', sans-serif;
+}

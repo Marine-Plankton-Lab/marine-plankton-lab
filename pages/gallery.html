@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Security Headers for GitHub Pages -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Gallery | Marine Plankton Lab | PKNU</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .gallery-item {
+      background: var(--white, #fff);
+      border-radius: var(--radius, 12px);
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8fafc;
+      color: var(--text-mid, #64748b);
+      border: 1px solid rgba(0, 62, 138, 0.08);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html#home" class="nav-brand">
+      <div class="nav-logo-icon">
+        <img src="../images/대지 1.png" alt="MPL Logo">
+      </div>
+      <div class="nav-brand-text">
+        <h1>Marine Plankton Lab</h1>
+        <span>Marine Plankton Biology · PKNU</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#research">Research</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="equipment.html">Equipment</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="section-tag">Gallery</div>
+      <h1>Photo Gallery</h1>
+      <p>Capturing moments from our lab and field research</p>
+    </div>
+  </div>
+
+  <main class="page-main">
+    <div class="page-inner">
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in">
+          <span>Image coming soon</span>
+        </div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.1s">
+          <span>Image coming soon</span>
+        </div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.2s">
+          <span>Image coming soon</span>
+        </div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.3s">
+          <span>Image coming soon</span>
+        </div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.4s">
+          <span>Image coming soon</span>
+        </div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.5s">
+          <span>Image coming soon</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width:1280px; margin:0 auto; padding: 32px 0;">
+      <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.07); padding-top: 28px;">
+        <span>© 2026 Marine Plankton Lab · Pukyong National University</span>
+        <a href="../index.html" style="color: var(--accent2);">← Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+  <script>
+    const nb = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+    const t = document.getElementById('nav-toggle'), n = document.getElementById('nav-links');
+    if (t) t.addEventListener('click', () => n.classList.toggle('open'));
+    const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => { obs.observe(el); setTimeout(() => el.classList.add('visible'), 300); });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Security Headers for GitHub Pages -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Lab Equipment | Marine Plankton Lab | PKNU</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <style>
+    .equip-page-grid { display: flex; flex-direction: column; gap: 56px; }
+    .equip-page-category { width: 100%; }
+    .equip-page-cat-header {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 24px;
+      padding-bottom: 12px; border-bottom: 2px solid rgba(0,62,138,0.09);
+    }
+    .equip-page-icon { font-size: 2rem; }
+    .equip-page-cat-header h2 {
+      font-size: 1.2rem; font-weight: 800; color: var(--primary);
+      font-family: 'Outfit', sans-serif;
+    }
+    .equip-page-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    @media (max-width: 900px) { .equip-page-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .equip-page-cards { grid-template-columns: 1fr; } }
+    .equip-page-card {
+      background: white; border-radius: var(--radius-sm);
+      border: 1px solid rgba(0,62,138,0.09); overflow: hidden;
+      transition: var(--transition);
+    }
+    .equip-page-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow); }
+    .equip-page-photo {
+      width: 100%; height: 200px; object-fit: cover;
+      background: linear-gradient(135deg, var(--surface), var(--surface2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; color: var(--text-light); border-bottom: 1px solid rgba(0,62,138,0.07);
+    }
+    .equip-page-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .equip-page-info { padding: 18px 20px; }
+    .equip-page-name { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+    .equip-page-model {
+      font-size: 0.8rem; color: var(--teal); font-weight: 600;
+      font-family: 'Outfit', sans-serif; margin-bottom: 8px;
+    }
+    .equip-page-desc { font-size: 0.85rem; color: var(--text-mid); line-height: 1.7; }
+    .equip-add-btn {
+      display: flex; align-items: center; gap: 8px;
+      background: none; border: 2px dashed rgba(0,62,138,0.2);
+      border-radius: var(--radius-sm); padding: 18px 22px;
+      color: var(--text-light); cursor: pointer; font-size: 0.88rem;
+      transition: var(--transition); width: 100%; min-height: 200px;
+      flex-direction: column; justify-content: center; font-family: 'Noto Sans KR', sans-serif;
+    }
+    .equip-add-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,180,216,0.03); }
+    .equip-add-btn span:first-child { font-size: 2rem; }
+    /* Photo replace overlay */
+    .equip-photo-wrap {
+      position: relative; width: 100%; height: 200px;
+      overflow: hidden; border-bottom: 1px solid rgba(0,62,138,0.07);
+      background: linear-gradient(135deg, var(--surface), var(--surface2));
+    }
+    .equip-photo-wrap img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .equip-photo-wrap .photo-placeholder-icon {
+      width: 100%; height: 100%; display: flex; align-items: center;
+      justify-content: center; font-size: 3rem; color: var(--text-light);
+    }
+      position: absolute; inset: 0;
+      background: rgba(0,20,60,0.72);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 8px;
+      opacity: 0; transition: opacity 0.25s;
+      cursor: pointer; color: white; text-align: center; padding: 12px;
+    }
+      font-size: 0.82rem; font-weight: 700; color: var(--accent2);
+    }
+      font-size: 0.72rem; color: rgba(255,255,255,0.65);
+      font-family: monospace; background: rgba(0,0,0,0.4);
+      padding: 3px 8px; border-radius: 4px; word-break: break-all;
+    }
+    .how-to-add {
+      background: rgba(0,62,138,0.04); border: 1px solid rgba(0,62,138,0.1);
+      border-radius: var(--radius); padding: 24px 28px; margin-bottom: 40px;
+      font-size: 0.9rem; color: var(--text-mid); line-height: 1.8;
+    }
+    .how-to-add h4 { font-weight: 700; color: var(--primary); margin-bottom: 8px; font-size: 0.95rem; }
+    .how-to-add code { background: var(--surface); padding: 2px 8px; border-radius: 5px; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html#home" class="nav-brand">
+      <div class="nav-logo-icon">
+        <img src="../images/대지 1.png" alt="MPL Logo">
+      </div>
+      <div class="nav-brand-text">
+        <h1>Marine Plankton Lab</h1>
+        <span>Marine Plankton Biology · PKNU</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#research">Research</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="equipment.html" class="active">Equipment</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="section-tag">Lab Infrastructure</div>
+      <h1>Laboratory Equipment</h1>
+      <p>Instrumentation supporting research in marine microbiology and protistology</p>
+    </div>
+  </div>
+
+  <main class="page-main">
+    <div class="page-inner">
+
+
+      <div class="equip-page-grid">
+
+        <!-- Microscopy -->
+        <div class="equip-page-category fade-in">
+          <div class="equip-page-cat-header">
+            <span class="equip-page-icon">🔬</span>
+            <h2>Microscopy & Imaging</h2>
+          </div>
+          <div class="equip-page-cards">
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_fluorescence_microscope_1773652326749.png" alt="Fluorescence Microscope">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Fluorescence Microscope</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Detecting parasitic infection, chlorophyll autofluorescence, and DAPI staining in marine protists</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_inverted_microscope_1773652356870.png" alt="Inverted Microscope">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Inverted Microscope</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Live cell observation, culture monitoring, and feeding behavior studies</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_phase_contrast_microscope_1773652371442.png" alt="Phase Contrast Microscope">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Phase Contrast Microscope</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">High-resolution morphological characterization and taxonomic work on protists</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <div class="photo-placeholder-icon"></div>
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name" style="color:var(--text-light);">— Add Equipment —</div>
+                <div class="equip-page-model"></div>
+                <div class="equip-page-desc">Edit <code>pages/equipment.html</code> to add</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Molecular Biology -->
+        <div class="equip-page-category fade-in" style="transition-delay:.06s">
+          <div class="equip-page-cat-header">
+            <span class="equip-page-icon">🧬</span>
+            <h2>Molecular Biology</h2>
+          </div>
+          <div class="equip-page-cards">
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_qpcr_system_1773652385959.png" alt="Real-time qPCR System">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Real-time qPCR System</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Quantitative detection of marine parasite species (Amoebophrya, Karenia, Alexandrium, PST-producers)</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_thermal_cycler_1773652416302.png" alt="Thermal Cycler (PCR)">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Thermal Cycler (PCR)</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Standard and single-cell PCR for molecular phylogenetics and diversity studies</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_gel_electrophoresis_1773652429978.png" alt="Gel Electrophoresis System">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Gel Electrophoresis System</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Agarose gel electrophoresis and gel documentation for molecular analysis</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_plankton_net_1773653140073.png" alt="High-speed Centrifuge">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">High-speed Centrifuge</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Cell harvesting, pellet isolation, and gradient centrifugation</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <div class="photo-placeholder-icon"></div>
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name" style="color:var(--text-light);">— Add Equipment —</div>
+                <div class="equip-page-model"></div>
+                <div class="equip-page-desc">Edit <code>pages/equipment.html</code> to add</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Culture & Incubation -->
+        <div class="equip-page-category fade-in" style="transition-delay:.1s">
+          <div class="equip-page-cat-header">
+            <span class="equip-page-icon">🧪</span>
+            <h2>Culture &amp; Incubation</h2>
+          </div>
+          <div class="equip-page-cards">
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_precision_incubator_1773652460736.png" alt="Precision Incubator">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Precision Incubator</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Temperature- and light-controlled growth chambers for phytoplankton and parasite co-cultures</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_laminar_flow_hood_1773652477462.png" alt="Laminar Flow Hood">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Laminar Flow Hood</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Sterile culture preparation for sensitive marine protist cultures</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_autoclave_1773653109869.png" alt="Autoclave">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Autoclave</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Sterilization of culture media and equipment</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <div class="photo-placeholder-icon"></div>
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name" style="color:var(--text-light);">— Add Equipment —</div>
+                <div class="equip-page-model"></div>
+                <div class="equip-page-desc">Edit <code>pages/equipment.html</code> to add</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Field & Sampling -->
+        <div class="equip-page-category fade-in" style="transition-delay:.14s">
+          <div class="equip-page-cat-header">
+            <span class="equip-page-icon">🌊</span>
+            <h2>Field &amp; Sampling</h2>
+          </div>
+          <div class="equip-page-cards">
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_niskin_sampler_1773653127407.png" alt="Niskin Water Samplers">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Niskin Water Samplers</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Discrete depth water sampling for parasite ecology field surveys</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_plankton_net_1773653140073.png" alt="Plankton Nets">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">Plankton Nets (fine-mesh)</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Collection of target protists from Korean coastal waters</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <img src="../images/equipment/equip_flowcam_1773656009720.png" alt="FlowCam">
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name">FlowCytometer / FlowCAM</div>
+                <div class="equip-page-model">Model: (enter model)</div>
+                <div class="equip-page-desc">Automated particle imaging, plankton counting, and cell abundance monitoring</div>
+              </div>
+            </div>
+
+            <div class="equip-page-card">
+              <div class="equip-photo-wrap">
+                <div class="photo-placeholder-icon"></div>
+              </div>
+              <div class="equip-page-info">
+                <div class="equip-page-name" style="color:var(--text-light);">— Add Equipment —</div>
+                <div class="equip-page-model"></div>
+                <div class="equip-page-desc">Edit <code>pages/equipment.html</code> to add</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width:1280px; margin:0 auto; padding:32px 0;">
+      <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.07); padding-top:28px;">
+        <span>© 2026 Marine Plankton Lab · Pukyong National University</span>
+        <a href="../index.html" style="color:var(--accent2);">← Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nb = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+    const t = document.getElementById('nav-toggle'), n = document.getElementById('nav-links');
+    if(t) t.addEventListener('click', () => n.classList.toggle('open'));
+    const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } }), {threshold: 0.08});
+    document.querySelectorAll('.fade-in').forEach(el => { obs.observe(el); setTimeout(() => el.classList.add('visible'), 300); });
+  </script>
+</body>
+</html>
+
