@@ -32,7 +32,11 @@
 .members-grid { display: grid; gap: 20px; }
 .members-grid-3 { grid-template-columns: repeat(3,1fr); }
 .members-grid-1 { grid-template-columns: 1fr; max-width: 680px; }
-@media (max-width: 768px) { .members-grid-3 { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .members-grid-3 { grid-template-columns: 1fr; }
+  .member-card-lead { flex-direction: column; text-align: center; padding: 24px; gap: 16px; }
+  .member-card-lead .member-avatar-lg { margin: 0 auto; }
+}
 
 .member-card {
   background: var(--white); border-radius: var(--radius); padding: 28px 24px;

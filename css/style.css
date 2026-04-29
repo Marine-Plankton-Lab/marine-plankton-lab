@@ -172,6 +172,26 @@ ul {
   font-weight: 700;
 }
 
+.nav-links .lang-toggle a {
+  background: rgba(0, 180, 216, 0.1);
+  color: var(--teal);
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  margin-left: 12px;
+  border: 1px solid rgba(0, 180, 216, 0.3);
+}
+
+.nav-links .lang-toggle a::after {
+  display: none;
+}
+
+.nav-links .lang-toggle a:hover {
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+}
+
 .nav-cta {
   background: linear-gradient(135deg, var(--primary), var(--teal)) !important;
   color: var(--white) !important;
@@ -1166,6 +1186,7 @@ section {
   gap: 10px;
   font-size: 0.82rem;
   backdrop-filter: blur(8px);
+  word-break: break-word; /* Prevents long emails from overflowing the mobile screen */
 }
 
 .prof-right h2 {
@@ -1822,8 +1843,8 @@ footer {
   .nav-links.open {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 72px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     background: white;
