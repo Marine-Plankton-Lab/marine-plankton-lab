@@ -1,632 +1,536 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Security Headers for GitHub Pages -->
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:;" />
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Publications | Marine Plankton Lab | PKNU</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/pages.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Security Headers for GitHub Pages -->
+<meta content="upgrade-insecure-requests; default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:;" http-equiv="Content-Security-Policy"/>
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<title>Publications | Marine Plankton Lab | PKNU</title>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/pages.css" rel="stylesheet"/>
 </head>
-
 <body>
-
-  <nav class="navbar" id="navbar">
-    <a href="../index.html#home" class="nav-brand">
-      <div class="nav-logo-icon">
-        <img src="../images/대지 1.png" alt="MPL Logo">
-      </div>
-      <div class="nav-brand-text">
-        <h1>Marine Plankton Lab</h1>
-        <span>Marine Plankton Biology · PKNU</span>
-      </div>
-    </a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="../index.html#about">연구실 소개</a></li>
-      <li><a href="../index.html#research">연구 분야</a></li>
-      <li><a href="projects.html">연구 과제</a></li>
-      <li><a href="publications.html" class="active">논문 및 저서</a></li>
-      <li><a href="members.html">구성원</a></li>
-      <li><a href="equipment.html">연구 장비</a></li>
-      <li><a href="gallery.html">갤러리</a></li>
-      <li><a href="../index.html#contact" class="nav-cta">문의</a></li>
-      <li class="lang-toggle"><a href="publications_en.html">English</a></li>
-    </ul>
-    <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
-  </nav>
-
-  <div class="page-hero">
-    <div class="page-hero-content">
-      <div class="section-tag">연구 성과</div>
-      <h1>논문 및 저서</h1>
-      <p>국제 학술지 논문 44편 (2006–2026) · 부경대학교 김선주 교수</p>
-    </div>
-  </div>
-
-  <main class="page-main">
-    <div class="page-inner">
-
-      <!-- Filter -->
-      <div class="pub-filter-bar">
-<button class="pub-filter-btn active" onclick="filterPubs('all', this)">전체 (54)</button>
+<nav class="navbar" id="navbar">
+<a class="nav-brand" href="../index.html#home">
+<div class="nav-logo-icon">
+<img alt="MPL Logo" src="../images/대지 1.png"/>
+</div>
+<div class="nav-brand-text">
+<h1>Marine Plankton Lab</h1>
+<span>Marine Plankton Biology · PKNU</span>
+</div>
+</a>
+<ul class="nav-links" id="nav-links">
+<li><a href="../index.html#about">연구실 소개</a></li>
+<li><a href="../index.html#research">연구 분야</a></li>
+<li><a href="projects.html">연구 과제</a></li>
+<li><a class="active" href="publications.html">논문 및 저서</a></li>
+<li><a href="members.html">구성원</a></li>
+<li><a href="equipment.html">연구 장비</a></li>
+<li><a href="gallery.html">갤러리</a></li>
+<li><a class="nav-cta" href="../index.html#contact">문의</a></li>
+<li class="lang-toggle"><a href="publications_en.html">English</a></li>
+</ul>
+<button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+</nav>
+<div class="page-hero">
+<div class="page-hero-content">
+<div class="section-tag">연구 성과</div>
+<h1>논문 및 저서</h1>
+<p>국제 학술지 논문 54편 (2006–2026) · 부경대학교 김선주 교수</p>
+</div>
+</div>
+<main class="page-main">
+<div class="page-inner">
+<!-- Filter -->
+<div class="pub-filter-bar">
+<button class="pub-filter-btn active" onclick="filterPubs('all', this)">전체 (56)</button>
 <button class="pub-filter-btn" onclick="filterPubs('parasites', this)">기생성 원생생물 (24)</button>
 <button class="pub-filter-btn" onclick="filterPubs('dino', this)">와편모조류 (27)</button>
 <button class="pub-filter-btn" onclick="filterPubs('hab', this)">유해조류대발생(HABs) (13)</button>
 <button class="pub-filter-btn" onclick="filterPubs('molecular', this)">분자 및 진화 (26)</button>
 <button class="pub-filter-btn" onclick="filterPubs('diatom', this)">규조류 기생생물 (6)</button>
+<button class="pub-filter-btn" onclick="filterPubs('books', this)">저서 (2)</button>
 </div>
-
-      
-      <!-- 2026 -->
-      <div class="pub-year-group fade-in" data-y="2026">
-        <div class="pub-year-header">2026</div>
-
-        <div class="pub-item" data-topic="parasites diatom">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[1]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1101/2025.07.29.667418v1" target="_blank" rel="noopener">Phagocytosis repurposed: infection strategies in a global marine diatom-parasite
+<!-- 2026 -->
+<div class="pub-year-group fade-in" data-y="2026">
+<div class="pub-year-header">2026</div>
+<div class="pub-item" data-topic="parasites diatom">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[1]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1101/2025.07.29.667418v1" rel="noopener" target="_blank">Phagocytosis repurposed: infection strategies in a global marine diatom-parasite
               interaction</a></div>
-          <div class="pub-item-authors">Mathur R. et al., Kim S.</div>
-          <div class="pub-item-journal"><em>Nature Microbiology</em>, 2026 <span class="pub-badge">In Revision
+<div class="pub-item-authors">Mathur R. et al., Kim S.</div>
+<div class="pub-item-journal"><em>Nature Microbiology</em>, 2026 <span class="pub-badge">In Revision
               (bioRxiv)</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[2]</span>
-          <div class="pub-item-title"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jpy.70160" target="_blank" rel="noopener">Unveiling the phylogenetic position of the type species of the syndinean genus
+</div>
+<div class="pub-item" data-topic="parasites molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[2]</span>
+<div class="pub-item-title"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jpy.70160" rel="noopener" target="_blank">Unveiling the phylogenetic position of the type species of the syndinean genus
             <em>Amoebophrya</em> and broad divergence of the <em>A. ceratii</em> complex</a></div>
-          <div class="pub-item-authors">Kim S.*, Yoo J., Coats D.W.</div>
-          <div class="pub-item-journal"><em>Journal of Phycology</em>, 2026 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="hab molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[3]</span>
-          <div class="pub-item-title"><a href="https://www.mdpi.com/2079-7737/15/3/219" target="_blank" rel="noopener">Multiplex qPCR assay for simultaneous detection of three PST-producing dinoflagellates in
+<div class="pub-item-authors">Kim S.*, Yoo J., Coats D.W.</div>
+<div class="pub-item-journal"><em>Journal of Phycology</em>, 2026 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="hab molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[3]</span>
+<div class="pub-item-title"><a href="https://www.mdpi.com/2079-7737/15/3/219" rel="noopener" target="_blank">Multiplex qPCR assay for simultaneous detection of three PST-producing dinoflagellates in
               the East China Sea off southern Korea</a></div>
-          <div class="pub-item-authors">Heo J., Tran N., Kim K., Kim S., Youn S., Park B.*</div>
-          <div class="pub-item-journal"><em>Biology</em>, 15(1):73, 2026 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="dino molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[4]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.ejop.2026.126182" target="_blank" rel="noopener"><em>Azadinium fusiforme</em>, a new species of Amphidomataceae from Korean and Japanese
+<div class="pub-item-authors">Heo J., Tran N., Kim K., Kim S., Youn S., Park B.*</div>
+<div class="pub-item-journal"><em>Biology</em>, 15(1):73, 2026 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="dino molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[4]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.ejop.2026.126182" rel="noopener" target="_blank"><em>Azadinium fusiforme</em>, a new species of Amphidomataceae from Korean and Japanese
               coastal waters lacking azaspiracid production</a></div>
-          <div class="pub-item-authors">Tillmann U.*, Kuwata A., Cho K., …, Iwataki M.*, Kim S.*</div>
-          <div class="pub-item-journal"><em>European Journal of Protistology</em>, 2026 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites diatom">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[5]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.marenvres.2025.107654" target="_blank" rel="noopener">Environmental drivers modulate host-parasitoid coupling between the marine diatom
+<div class="pub-item-authors">Tillmann U.*, Kuwata A., Cho K., …, Iwataki M.*, Kim S.*</div>
+<div class="pub-item-journal"><em>European Journal of Protistology</em>, 2026 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="parasites diatom">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[5]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.marenvres.2025.107654" rel="noopener" target="_blank">Environmental drivers modulate host-parasitoid coupling between the marine diatom
               <em>Chaetoceros</em> and the cercozoan <em>Pseudopirsonia</em></a></div>
-          <div class="pub-item-authors">Cho K., Kim S.*</div>
-          <div class="pub-item-journal"><em>Marine Environmental Research</em>, 2026;213:107654 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2025 -->
-      <div class="pub-year-group fade-in" data-y="2025">
-        <div class="pub-year-header">2025</div>
-
-        <div class="pub-item" data-topic="parasites diatom">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[6]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.12651/JSR.2025.14.4.395" target="_blank" rel="noopener">New Records of the Marine diatom parasites <em>Lagenisma coscinodisci</em> (Lagenismatales,
+<div class="pub-item-authors">Cho K., Kim S.*</div>
+<div class="pub-item-journal"><em>Marine Environmental Research</em>, 2026;213:107654 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2025 -->
+<div class="pub-year-group fade-in" data-y="2025">
+<div class="pub-year-header">2025</div>
+<div class="pub-item" data-topic="parasites diatom">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[6]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.12651/JSR.2025.14.4.395" rel="noopener" target="_blank">New Records of the Marine diatom parasites <em>Lagenisma coscinodisci</em> (Lagenismatales,
               Oomycetes) and <em>Paulsenella kornmannii</em> (Thoracosphaerales, Dinophyceae) in Korea</a></div>
-          <div class="pub-item-authors">Kim H., Kim S.*</div>
-          <div class="pub-item-journal"><em>Journal of Species Research</em>, 14(4):395–403, 2025 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="diatom">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[7]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.7837/kosomes.2025.31.1.043" target="_blank" rel="noopener">Temperature and pH-dependent Growth Response of the marine diatom <em>Chaetoceros
+<div class="pub-item-authors">Kim H., Kim S.*</div>
+<div class="pub-item-journal"><em>Journal of Species Research</em>, 14(4):395–403, 2025 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="diatom">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[7]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.7837/kosomes.2025.31.1.043" rel="noopener" target="_blank">Temperature and pH-dependent Growth Response of the marine diatom <em>Chaetoceros
                 constrictus</em> (MPL-Cc01) isolated from the Yongho Bay, Busan</a></div>
-          <div class="pub-item-authors">Cho K., Kim S.*</div>
-          <div class="pub-item-journal"><em>Journal of the Korean Society of Marine Environmental &amp; Safety</em>,
+<div class="pub-item-authors">Cho K., Kim S.*</div>
+<div class="pub-item-journal"><em>Journal of the Korean Society of Marine Environmental &amp; Safety</em>,
             31(1):43–50, 2025</div>
-        </div>
-
-      </div>
-
-      <!-- 2024 -->
-      <div class="pub-year-group fade-in" data-y="2024">
-        <div class="pub-year-header">2024</div>
-
-        <div class="pub-item" data-topic="parasites diatom molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[8]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.4490/algae.2024.39.11.15" target="_blank" rel="noopener">A novel parasitoid, <em>Pseudopirsonia chaetoceri</em> n. sp. (Imbricatea, Cercozoa), of
+</div>
+</div>
+<!-- 2024 -->
+<div class="pub-year-group fade-in" data-y="2024">
+<div class="pub-year-header">2024</div>
+<div class="pub-item" data-topic="parasites diatom molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[8]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.4490/algae.2024.39.11.15" rel="noopener" target="_blank">A novel parasitoid, <em>Pseudopirsonia chaetoceri</em> n. sp. (Imbricatea, Cercozoa), of
               marine diatoms discovered in Korean coastal waters</a></div>
-          <div class="pub-item-authors">Cho K., Kim S.*</div>
-          <div class="pub-item-journal"><em>Algae</em>, 39(4):225–239, 2024 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[9]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.3389/fmars.2023.1296836" target="_blank" rel="noopener">Morphology of <em>Hobagella saltata</em> n. gen. and n. sp. (Syndiniophyceae, Miozoa)
+<div class="pub-item-authors">Cho K., Kim S.*</div>
+<div class="pub-item-journal"><em>Algae</em>, 39(4):225–239, 2024 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="parasites molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[9]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.3389/fmars.2023.1296836" rel="noopener" target="_blank">Morphology of <em>Hobagella saltata</em> n. gen. and n. sp. (Syndiniophyceae, Miozoa)
               infecting the marine dinoflagellate <em>Cucumeridinium coeruleum</em> (Dinophyceae, Miozoa) and its
               potential onshore advection</a></div>
-          <div class="pub-item-authors">Yoo J., Kim S.*, Coats D.W.</div>
-          <div class="pub-item-journal"><em>Frontiers in Marine Science</em>, 10:1296836, 2024 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2023 -->
-      <div class="pub-year-group fade-in" data-y="2023">
-        <div class="pub-year-header">2023</div>
-
-        <div class="pub-item" data-topic="hab molecular dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[10]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.3390/toxins15070469" target="_blank" rel="noopener">Application of a Quantitative PCR to Investigate the Distribution and Dynamics of Two
+<div class="pub-item-authors">Yoo J., Kim S.*, Coats D.W.</div>
+<div class="pub-item-journal"><em>Frontiers in Marine Science</em>, 10:1296836, 2024 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2023 -->
+<div class="pub-year-group fade-in" data-y="2023">
+<div class="pub-year-header">2023</div>
+<div class="pub-item" data-topic="hab molecular dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[10]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.3390/toxins15070469" rel="noopener" target="_blank">Application of a Quantitative PCR to Investigate the Distribution and Dynamics of Two
               Morphologically Similar Species, <em>Karenia mikimotoi</em> and <em>K. papilionacea</em> (Dinophyceae) in
               Korean Coastal Waters</a></div>
-          <div class="pub-item-authors">Kim S., Cho M., Yoo J., Park B.S.</div>
-          <div class="pub-item-journal"><em>Toxins</em>, 15(7):469, 2023 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2022 -->
-      <div class="pub-year-group fade-in" data-y="2022">
-        <div class="pub-year-header">2022</div>
-
-        <div class="pub-item" data-topic="parasites molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[11]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1111/jeu.12953" target="_blank" rel="noopener">Syndinean dinoflagellates of the genus <em>Euduboscquella</em> are paraphyletic</a></div>
-          <div class="pub-item-authors">Yoo J., Coats D.W., Kim S.*</div>
-          <div class="pub-item-journal"><em>Journal of Eukaryotic Microbiology</em>, 69(2):e12953, 2022 · DOI:
+<div class="pub-item-authors">Kim S., Cho M., Yoo J., Park B.S.</div>
+<div class="pub-item-journal"><em>Toxins</em>, 15(7):469, 2023 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2022 -->
+<div class="pub-year-group fade-in" data-y="2022">
+<div class="pub-year-header">2022</div>
+<div class="pub-item" data-topic="parasites molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[11]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1111/jeu.12953" rel="noopener" target="_blank">Syndinean dinoflagellates of the genus <em>Euduboscquella</em> are paraphyletic</a></div>
+<div class="pub-item-authors">Yoo J., Coats D.W., Kim S.*</div>
+<div class="pub-item-journal"><em>Journal of Eukaryotic Microbiology</em>, 69(2):e12953, 2022 · DOI:
             10.1111/jeu.12953 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="hab">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[12]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.3390/bioengineering9040170" target="_blank" rel="noopener">Rylene Dye-Loaded Polymeric nanoparticles for photothermal eradication of harmful
+</div>
+<div class="pub-item" data-topic="hab">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[12]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.3390/bioengineering9040170" rel="noopener" target="_blank">Rylene Dye-Loaded Polymeric nanoparticles for photothermal eradication of harmful
               dinoflagellates, <em>Akashiwo sanguinea</em> and <em>Alexandrium pacificum</em></a></div>
-          <div class="pub-item-authors">Tumpar A., Kang J., Yoo J., Kim S.*, Kwak M.*</div>
-          <div class="pub-item-journal"><em>Bioengineering</em>, 9:170, 2022 · DOI: 10.3390/bioengineering9040170 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2021 -->
-      <div class="pub-year-group fade-in" data-y="2021">
-        <div class="pub-year-header">2021</div>
-
-        <div class="pub-item" data-topic="dino molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[13]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.11626/KJEB.2021.39.4.573" target="_blank" rel="noopener">New records of five taxa of unarmored and thin-walled dinoflagellates from brackish and
+<div class="pub-item-authors">Tumpar A., Kang J., Yoo J., Kim S.*, Kwak M.*</div>
+<div class="pub-item-journal"><em>Bioengineering</em>, 9:170, 2022 · DOI: 10.3390/bioengineering9040170 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2021 -->
+<div class="pub-year-group fade-in" data-y="2021">
+<div class="pub-year-header">2021</div>
+<div class="pub-item" data-topic="dino molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[13]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.11626/KJEB.2021.39.4.573" rel="noopener" target="_blank">New records of five taxa of unarmored and thin-walled dinoflagellates from brackish and
               coastal waters of Korea</a></div>
-          <div class="pub-item-authors">Choi H., Cho M., Kim S.*</div>
-          <div class="pub-item-journal"><em>Korean Journal of Environmental Biology</em>, 39(4):573–580, 2021</div>
-        </div>
-
-        <div class="pub-item" data-topic="dino molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[14]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.ejop.2021.125797" target="_blank" rel="noopener"><em>Heterocapsa busanensis</em> sp. nov. (Peridiniales, Dinophyceae): A new marine thecate
+<div class="pub-item-authors">Choi H., Cho M., Kim S.*</div>
+<div class="pub-item-journal"><em>Korean Journal of Environmental Biology</em>, 39(4):573–580, 2021</div>
+</div>
+<div class="pub-item" data-topic="dino molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[14]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.ejop.2021.125797" rel="noopener" target="_blank"><em>Heterocapsa busanensis</em> sp. nov. (Peridiniales, Dinophyceae): A new marine thecate
               dinoflagellate from Korean coastal waters</a></div>
-          <div class="pub-item-authors">Choi H., Kim S.*</div>
-          <div class="pub-item-journal"><em>European Journal of Protistology</em>, 79:e125797, 2021 · DOI:
+<div class="pub-item-authors">Choi H., Kim S.*</div>
+<div class="pub-item-journal"><em>European Journal of Protistology</em>, 79:e125797, 2021 · DOI:
             10.1016/j.ejop.2021.125797 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[15]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.11626/KJEB.2021.39.2.236" target="_blank" rel="noopener">Newly recorded unarmored dinoflagellates in the family Kareniaceae (Gymnodiniales,
+</div>
+<div class="pub-item" data-topic="dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[15]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.11626/KJEB.2021.39.2.236" rel="noopener" target="_blank">Newly recorded unarmored dinoflagellates in the family Kareniaceae (Gymnodiniales,
               Dinophyceae) in brackish and coastal waters of Korea</a></div>
-          <div class="pub-item-authors">Cho M., Choi H., Nam S.W., Kim S.*</div>
-          <div class="pub-item-journal"><em>Korean Journal of Environmental Biology</em>, 39(2):236–244, 2021</div>
-        </div>
-
-        <div class="pub-item" data-topic="molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[16]</span>
-          <div class="pub-item-title"><a href="https://www.tandfonline.com/doi/full/10.1080/23802359.2021.1915713" target="_blank" rel="noopener">The complete mitochondrial genome and phylogeny of <em>Diacronema
+<div class="pub-item-authors">Cho M., Choi H., Nam S.W., Kim S.*</div>
+<div class="pub-item-journal"><em>Korean Journal of Environmental Biology</em>, 39(2):236–244, 2021</div>
+</div>
+<div class="pub-item" data-topic="molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[16]</span>
+<div class="pub-item-title"><a href="https://www.tandfonline.com/doi/full/10.1080/23802359.2021.1915713" rel="noopener" target="_blank">The complete mitochondrial genome and phylogeny of <em>Diacronema
                 viridis</em> (Pavlovales,
               Pavlovophyceae)</a></div>
-          <div class="pub-item-authors">Kim S.Y., Kim S., Yang E.C.*</div>
-          <div class="pub-item-journal"><em>Mitochondrial DNA Part B</em>, 6(6):1702–1703, 2021 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2020 -->
-      <div class="pub-year-group fade-in" data-y="2020">
-        <div class="pub-year-header">2020</div>
-
-        <div class="pub-item" data-topic="parasites dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[17]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.11626/KJEB.2020.38.4.567" target="_blank" rel="noopener">Infection of marine diatom <em>Coscinodiscus wailesii</em> (Bacillariophyceae) by the
+<div class="pub-item-authors">Kim S.Y., Kim S., Yang E.C.*</div>
+<div class="pub-item-journal"><em>Mitochondrial DNA Part B</em>, 6(6):1702–1703, 2021 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="books">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[17]</span>
+<div class="pub-item-title">해양생물학 11 판 Marine biology 11th</div>
+<div class="pub-item-authors">강창근 외</div>
+<div class="pub-item-journal">㈜라이프사이언스, 462pp, 2021 <span class="pub-badge non-sci">Book</span></div>
+</div>
+</div>
+<!-- 2020 -->
+<div class="pub-year-group fade-in" data-y="2020">
+<div class="pub-year-header">2020</div>
+<div class="pub-item" data-topic="parasites dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[18]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.11626/KJEB.2020.38.4.567" rel="noopener" target="_blank">Infection of marine diatom <em>Coscinodiscus wailesii</em> (Bacillariophyceae) by the
               parasitic nanoflagellate <em>Pirsonia diadema</em> (Stramenopiles) from Yongho Bay in Korea</a></div>
-          <div class="pub-item-authors">Yoo J., Kim S.*</div>
-          <div class="pub-item-journal"><em>Korean Journal of Environmental Biology</em>, 38(4):567–577, Dec 2020</div>
-        </div>
-
-        <div class="pub-item" data-topic="hab parasites">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[18]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1111/mec.15714" target="_blank" rel="noopener">Zooming
+<div class="pub-item-authors">Yoo J., Kim S.*</div>
+<div class="pub-item-journal"><em>Korean Journal of Environmental Biology</em>, 38(4):567–577, Dec 2020</div>
+</div>
+<div class="pub-item" data-topic="hab parasites">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[19]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1111/mec.15714" rel="noopener" target="_blank">Zooming
               on dynamics of marine microbial communities in the phycosphere of <em>Akashiwo sanguinea</em> (Dinophyta)
               blooms</a></div>
-          <div class="pub-item-authors">Kang J. et al., Kim S.</div>
-          <div class="pub-item-journal"><em>Molecular Ecology</em>, 30(1):207–221, Oct 2020 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2019 -->
-      <div class="pub-year-group fade-in" data-y="2019">
-        <div class="pub-year-header">2019</div>
-
-        <div class="pub-item" data-topic="hab dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[19]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2019.24.2.236" target="_blank" rel="noopener">Distribution and molecular phylogeny of the toxic benthic dinoflagellate
+<div class="pub-item-authors">Kang J. et al., Kim S.</div>
+<div class="pub-item-journal"><em>Molecular Ecology</em>, 30(1):207–221, Oct 2020 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2019 -->
+<div class="pub-year-group fade-in" data-y="2019">
+<div class="pub-year-header">2019</div>
+<div class="pub-item" data-topic="hab dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[20]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2019.24.2.236" rel="noopener" target="_blank">Distribution and molecular phylogeny of the toxic benthic dinoflagellate
               <em>Ostreopsis</em> sp. in the coastal waters off Jeju Island, Korea</a></div>
-          <div class="pub-item-authors">Kim S.*, Seo H.</div>
-          <div class="pub-item-journal"><em>Journal of Korean Society of Oceanography</em>, 24(2):236–248, Mar 2019</div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites hab">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[20]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2019.03.012" target="_blank" rel="noopener">Dynamics of <em>Amoebophrya</em> parasites during recurrent blooms of the ichthyotoxic
+<div class="pub-item-authors">Kim S.*, Seo H.</div>
+<div class="pub-item-journal"><em>Journal of Korean Society of Oceanography</em>, 24(2):236–248, Mar 2019</div>
+</div>
+<div class="pub-item" data-topic="parasites hab">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[21]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2019.03.012" rel="noopener" target="_blank">Dynamics of <em>Amoebophrya</em> parasites during recurrent blooms of the ichthyotoxic
               dinoflagellate <em>Cochlodinium polykrikoides</em> in Korean coastal waters</a></div>
-          <div class="pub-item-authors">Park B.<sup>†</sup>, Kim S.<sup>†</sup> (co-first), Kim J.H., Kim J.H., Han
+<div class="pub-item-authors">Park B.<sup>†</sup>, Kim S.<sup>†</sup> (co-first), Kim J.H., Kim J.H., Han
             M.S.*</div>
-          <div class="pub-item-journal"><em>Harmful Algae</em>, 84:119–126, Apr 2019 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[21]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1038/s41598-019-38621-8" target="_blank" rel="noopener">Evolutionary dynamics of the chromatophore genome in three photosynthetic
+<div class="pub-item-journal"><em>Harmful Algae</em>, 84:119–126, Apr 2019 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[22]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1038/s41598-019-38621-8" rel="noopener" target="_blank">Evolutionary dynamics of the chromatophore genome in three photosynthetic
               <em>Paulinella</em> species</a></div>
-          <div class="pub-item-authors">Lhee D., Ha J.S., Kim S., Park M.G., Bhattacharya D., Yoon H.S.</div>
-          <div class="pub-item-journal"><em>Scientific Reports</em>, 9:2560–2671, Feb 2019 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2018 -->
-      <div class="pub-year-group fade-in" data-y="2018">
-        <div class="pub-year-header">2018</div>
-
-        <div class="pub-item" data-topic="parasites">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[22]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.4490/algae.2018.33.1.1" target="_blank" rel="noopener">Revisiting the <em>Parvilucifera infectans / P. sinerae</em> (Alveolata, Perkinsozoa)
+<div class="pub-item-authors">Lhee D., Ha J.S., Kim S., Park M.G., Bhattacharya D., Yoon H.S.</div>
+<div class="pub-item-journal"><em>Scientific Reports</em>, 9:2560–2671, Feb 2019 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2018 -->
+<div class="pub-year-group fade-in" data-y="2018">
+<div class="pub-year-header">2018</div>
+<div class="pub-item" data-topic="parasites">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[23]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.4490/algae.2018.33.1.1" rel="noopener" target="_blank">Revisiting the <em>Parvilucifera infectans / P. sinerae</em> (Alveolata, Perkinsozoa)
               species complex, two parasitoids of dinoflagellates</a></div>
-          <div class="pub-item-authors">Jeon B.S., Nam S.W., Kim S., Park M.G.</div>
-          <div class="pub-item-journal"><em>Algae</em>, 33(1):1–19, 2018 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites hab">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[23]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2018.23.1.20" target="_blank" rel="noopener">Effect of water temperature on infectivity of the parasitoid <em>Amoebophrya</em> sp.
+<div class="pub-item-authors">Jeon B.S., Nam S.W., Kim S., Park M.G.</div>
+<div class="pub-item-journal"><em>Algae</em>, 33(1):1–19, 2018 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="parasites hab">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[24]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2018.23.1.20" rel="noopener" target="_blank">Effect of water temperature on infectivity of the parasitoid <em>Amoebophrya</em> sp.
               infecting the harmful bloom-forming dinoflagellate <em>Akashiwo sanguinea</em></a></div>
-          <div class="pub-item-authors">Jung Y., Kim S.*</div>
-          <div class="pub-item-journal"><em>The Sea (Journal of Korean Society of Oceanography)</em>, 23(1):20–31, 2018</div>
-        </div>
-
-      </div>
-
-      <!-- 2017 -->
-      <div class="pub-year-group fade-in" data-y="2017">
-        <div class="pub-year-header">2017</div>
-
-        <div class="pub-item" data-topic="parasites diatom molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[24]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.4490/algae.2017.32.9.2" target="_blank" rel="noopener">Morphological observations and phylogenetic position of the parasitoid nanoflagellate
+<div class="pub-item-authors">Jung Y., Kim S.*</div>
+<div class="pub-item-journal"><em>The Sea (Journal of Korean Society of Oceanography)</em>, 23(1):20–31, 2018</div>
+</div>
+</div>
+<!-- 2017 -->
+<div class="pub-year-group fade-in" data-y="2017">
+<div class="pub-year-header">2017</div>
+<div class="pub-item" data-topic="parasites diatom molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[25]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.4490/algae.2017.32.9.2" rel="noopener" target="_blank">Morphological observations and phylogenetic position of the parasitoid nanoflagellate
               <em>Pseudopirsonia</em> sp. (Cercozoa) infecting the marine diatom <em>Coscinodiscus wailesii</em>
               (Bacillariophyta)</a></div>
-          <div class="pub-item-authors">Kim S., Jeon B.S., Park M.G.</div>
-          <div class="pub-item-journal"><em>Algae</em>, 32(3):181–187, 2017 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="dino hab molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[25]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2017.02.003" target="_blank" rel="noopener">Feeding characteristics and molecular phylogeny of the thecate mixotrophic dinoflagellate
+<div class="pub-item-authors">Kim S., Jeon B.S., Park M.G.</div>
+<div class="pub-item-journal"><em>Algae</em>, 32(3):181–187, 2017 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="dino hab molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[26]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2017.02.003" rel="noopener" target="_blank">Feeding characteristics and molecular phylogeny of the thecate mixotrophic dinoflagellate
               <em>Fragilidium mexicanum</em></a></div>
-          <div class="pub-item-authors">Kim S., Park M.G.</div>
-          <div class="pub-item-journal"><em>Harmful Algae</em>, 63:154–163, 2017 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2016 -->
-      <div class="pub-year-group fade-in" data-y="2016">
-        <div class="pub-year-header">2016</div>
-
-        <div class="pub-item" data-topic="parasites hab">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[26]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2015.10.012" target="_blank" rel="noopener">Effect of the endoparasite <em>Amoebophrya</em> sp. on toxin content and composition in the
+<div class="pub-item-authors">Kim S., Park M.G.</div>
+<div class="pub-item-journal"><em>Harmful Algae</em>, 63:154–163, 2017 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2016 -->
+<div class="pub-year-group fade-in" data-y="2016">
+<div class="pub-year-header">2016</div>
+<div class="pub-item" data-topic="parasites hab">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[27]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2015.10.012" rel="noopener" target="_blank">Effect of the endoparasite <em>Amoebophrya</em> sp. on toxin content and composition in the
               paralytic shellfish poisoning dinoflagellate <em>Alexandrium fundyense</em> (Dinophyceae)</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G.</div>
-          <div class="pub-item-journal"><em>Harmful Algae</em>, 51:10–15, 2016 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[27]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.protis.2015.11.002" target="_blank" rel="noopener"><em>Paulinella longichromatophora</em> sp. nov., a new marine photosynthetic testate amoeba
+<div class="pub-item-authors">Kim S., Park M.G.</div>
+<div class="pub-item-journal"><em>Harmful Algae</em>, 51:10–15, 2016 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[28]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.protis.2015.11.002" rel="noopener" target="_blank"><em>Paulinella longichromatophora</em> sp. nov., a new marine photosynthetic testate amoeba
               containing a chromatophore</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G.</div>
-          <div class="pub-item-journal"><em>Protist</em>, 167:1–12, 2016 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2015 -->
-      <div class="pub-year-group fade-in" data-y="2015">
-        <div class="pub-year-header">2015</div>
-
-        <div class="pub-item" data-topic="dino molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[28]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2015.20.4.216" target="_blank" rel="noopener">Diversity and phylogenetic position of unarmored dinoflagellates from the coastal waters of Korea</a></div>
-          <div class="pub-item-authors">Kim S., Choi H.S., Park M.G.</div>
-          <div class="pub-item-journal"><em>The Sea (Journal of Korean Society of Oceanography)</em>, 20(4):216–226, 2015</div>
-        </div>
-
-        <div class="pub-item" data-topic="dino hab">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[29]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.4217/OPR.2015.37.3.201" target="_blank" rel="noopener">Semi-daily variations in populations of the dinoflagellates <em>Dinophysis acuminata</em>
+<div class="pub-item-authors">Kim S., Park M.G.</div>
+<div class="pub-item-journal"><em>Protist</em>, 167:1–12, 2016 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="books">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[29]</span>
+<div class="pub-item-title">Parasitic dinoflagellates</div>
+<div class="pub-item-authors">Kim S., Park M.G.</div>
+<div class="pub-item-journal">In: JK Choi (Eds.), Korean Protists. (in Korean), 2016 <span class="pub-badge non-sci">Book</span></div>
+</div>
+</div>
+<!-- 2015 -->
+<div class="pub-year-group fade-in" data-y="2015">
+<div class="pub-year-header">2015</div>
+<div class="pub-item" data-topic="dino molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[30]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2015.20.4.216" rel="noopener" target="_blank">Diversity and phylogenetic position of unarmored dinoflagellates from the coastal waters of Korea</a></div>
+<div class="pub-item-authors">Kim S., Choi H.S., Park M.G.</div>
+<div class="pub-item-journal"><em>The Sea (Journal of Korean Society of Oceanography)</em>, 20(4):216–226, 2015</div>
+</div>
+<div class="pub-item" data-topic="dino hab">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[31]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.4217/OPR.2015.37.3.201" rel="noopener" target="_blank">Semi-daily variations in populations of the dinoflagellates <em>Dinophysis acuminata</em>
               and a mixotrophic prey ciliate, <em>Mesodinium rubrum</em></a></div>
-          <div class="pub-item-authors">Kim S., Kim H.S., Kang Y.G., Park M.G.</div>
-          <div class="pub-item-journal"><em>Ocean and Polar Research</em>, 37(3):201–209, 2015</div>
-        </div>
-
-        <div class="pub-item" data-topic="dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[30]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.4490/algae.2015.30.1.035" target="_blank" rel="noopener">Obligate mixotrophy of the pigmented dinoflagellate <em>Polykrikos lebourae</em></a></div>
-          <div class="pub-item-authors">Kim S., Yoon J., Park M.G.</div>
-          <div class="pub-item-journal"><em>Algae</em>, 30(1):35–47, 2015 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[31]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2015.01.006" target="_blank" rel="noopener">Phased cell division and facultative mixotrophy of <em>Fragilidium duplocampanaeforme</em></a></div>
-          <div class="pub-item-authors">Park M.G., Kim M., Kim S.</div>
-          <div class="pub-item-journal"><em>Harmful Algae</em>, 43:20–30, 2015 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="molecular dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[32]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Occurrence%20and%20molecular%20phylogenetic%20characteristics%20of%20benthic%20sand-dwelling%20dinoflagellates%20in%20intertidal%20flat%20of%20Dongho%2C%20west%20coast%20of%20Korea%20Kim%20S." target="_blank" rel="noopener">Occurrence and molecular phylogenetic characteristics of benthic sand-dwelling dinoflagellates in intertidal flat of Dongho, west coast of Korea</a></div>
-          <div class="pub-item-authors">Kim S., Yoon J., Park M.G.</div>
-          <div class="pub-item-journal"><em>The Sea</em>, 2015 <span class="pub-badge non-sci">KCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2014 -->
-      <div class="pub-year-group fade-in" data-y="2014">
-        <div class="pub-year-header">2014</div>
-
-        <div class="pub-item" data-topic="molecular dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[33]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.4467/16890027AP.14.004.1437" target="_blank" rel="noopener">The acquisition of plastids/phototrophy in heterotrophic dinoflagellates</a></div>
-          <div class="pub-item-authors">Park M.G., Kim M., Kim S.</div>
-          <div class="pub-item-journal"><em>Acta Protozoologica</em>, 53:39–50, Jan 2014</div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[34]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1111/jeu.12093" target="_blank" rel="noopener"><em>Amoebophrya</em> spp. from the bloom-forming dinoflagellate <em>Cochlodinium polykrikoides</em></a></div>
-          <div class="pub-item-authors">Kim S.*, Park M.G.</div>
-          <div class="pub-item-journal"><em>Journal of Eukaryotic Microbiology</em>, 61(2):161–171, Mar/Apr 2014 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[35]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2014.19.3.183" target="_blank" rel="noopener">Spatio-temporal distribution of the parasitic dinoflagellate <em>Amoebophrya</em> sp.</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G.</div>
-          <div class="pub-item-journal"><em>The Sea (Journal of Korean Society of Oceanography)</em>, 19(3):183–192, 2014</div>
-        </div>
-
-      </div>
-
-      <!-- 2013 -->
-      <div class="pub-year-group fade-in" data-y="2013">
-        <div class="pub-year-header">2013</div>
-
-        <div class="pub-item" data-topic="molecular dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[36]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1371/journal.pone.0054315" target="_blank" rel="noopener">Still acting Green: Continued expression of photosynthetic genes in the heterotrophic dinoflagellate <em>Pfiesteria piscicida</em></a></div>
-          <div class="pub-item-authors">Coats D.W., Kim S., et al.</div>
-          <div class="pub-item-journal"><em>PLOS ONE</em>, 8(1):e54315, 2013 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites hab">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[37]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2013.10.005" target="_blank" rel="noopener">Parasitism of harmful dinoflagellates in Korean coastal waters</a></div>
-          <div class="pub-item-authors">Park M.G., Kim S.*, Shin E.Y., Yih W., Coats W.D.</div>
-          <div class="pub-item-journal"><em>Harmful Algae</em>, 30:S62–S74, Dec 2013 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="hab">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[38]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2013.18.2.101" target="_blank" rel="noopener">Red tides in Shiwa Bay, Korea in 2011</a></div>
-          <div class="pub-item-authors">Kim S., Cho M.H., Park M.G.</div>
-          <div class="pub-item-journal"><em>Journal of the Korean Society of Oceanography</em>, 18(2):101–110, 2013</div>
-        </div>
-
-      </div>
-
-      <!-- 2012 -->
-      <div class="pub-year-group fade-in" data-y="2012">
-        <div class="pub-year-header">2012</div>
-
-        <div class="pub-item" data-topic="parasites molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[39]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1128/AEM.01424-12" target="_blank" rel="noopener">Molecular diversity of the syndinean genus <em>Euduboscquella</em> based on single-cell PCR analysis</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., et al.</div>
-          <div class="pub-item-journal"><em>Applied and Environmental Microbiology</em>, 78(19):6986–6995, 2012 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="ecology dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[40]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=The%20marine%20dinoflagellate%20genus%20Dinophysis%20can%20retain%20plastids%20of%20multiple%20algal%20origins%20at%20the%20same%20time%20Kim%20M." target="_blank" rel="noopener">The marine dinoflagellate genus <em>Dinophysis</em> can retain plastids of multiple algal origins at the same time</a></div>
-          <div class="pub-item-authors">Kim M., Kim S., Yih W., Park M.G.</div>
-          <div class="pub-item-journal"><em>Harmful Algae</em>, 2012 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2011 -->
-      <div class="pub-year-group fade-in" data-y="2011">
-        <div class="pub-year-header">2011</div>
-
-        <div class="pub-item" data-topic="molecular dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[41]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1093/molbev/msq332" target="_blank" rel="noopener">Dynamics of actin evolution in dinoflagellates</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., et al.</div>
-          <div class="pub-item-journal"><em>Molecular Biology and Evolution</em>, 28(4):1469–1480, 2011 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="dino hab">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[42]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.3354/ame01469" target="_blank" rel="noopener">Feeding behavior of the thecate mixotrophic dinoflagellate <em>Oxyphysis oxytoxoides</em></a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., et al.</div>
-          <div class="pub-item-journal"><em>Aquatic Microbial Ecology</em>, 62(3):279–287, 2011 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2010 -->
-      <div class="pub-year-group fade-in" data-y="2010">
-        <div class="pub-year-header">2010</div>
-
-        <div class="pub-item" data-topic="parasites molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[43]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1111/j.1550-7408.2010.00501.x" target="_blank" rel="noopener"><em>Tintinnophagus acutus</em> n. g., n. sp. (Phylum Ciliophora), a Parasite of Tintinnid Ciliates</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., et al.</div>
-          <div class="pub-item-journal"><em>Journal of Eukaryotic Microbiology</em>, 57(6):468–482, 2010 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="dino molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[44]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.1111/j.1529-8817.2009.00790.x" target="_blank" rel="noopener">Does <em>Dinophysis caudata</em>... have permanent plastids?</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., et al.</div>
-          <div class="pub-item-journal"><em>Journal of Phycology</em>, 46(2):236–242, 2010 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2009 -->
-      <div class="pub-year-group fade-in" data-y="2009">
-        <div class="pub-year-header">2009</div>
-
-        <div class="pub-item" data-topic="molecular dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[45]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Phylogeny%20of%20four%20dinophysiacean%20genera%20%28Dinophyceae%2C%20Dinophysiales%29%20based%20on%20rDNA%20sequences%20from%20single%20cells%20and%20environmental%20samples%20Handy%20S.M." target="_blank" rel="noopener">Phylogeny of four dinophysiacean genera (Dinophyceae, Dinophysiales) based on rDNA sequences from single cells and environmental samples</a></div>
-          <div class="pub-item-authors">Handy S.M., Bachvaroff T.R., Timme R., Coats D.W., Kim S., Delwiche C.F.</div>
-          <div class="pub-item-journal"><em>Journal of Phycology</em>, 2009 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites ecology dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[46]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Dinoflagellate%20host-parasite%20sterol%20profiles%20dictate%20karlotoxin%20sensitivity%20Place%20A." target="_blank" rel="noopener">Dinoflagellate host-parasite sterol profiles dictate karlotoxin sensitivity</a></div>
-          <div class="pub-item-authors">Place A., Bai X., Kim S., Sengco M., Coats D.W.</div>
-          <div class="pub-item-journal"><em>Journal of Phycology</em>, 2009 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2008 -->
-      <div class="pub-year-group fade-in" data-y="2008">
-        <div class="pub-year-header">2008</div>
-
-        <div class="pub-item" data-topic="parasites molecular dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[47]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Prevalence%20and%20phylogeny%20of%20parasitic%20dinoflagellates%20%28Genus%20Blastodinium%29%20infecting%20copepods%20in%20the%20Gulf%20of%20California%20Coats%20D.W." target="_blank" rel="noopener">Prevalence and phylogeny of parasitic dinoflagellates (Genus <em>Blastodinium</em>) infecting copepods in the Gulf of California</a></div>
-          <div class="pub-item-authors">Coats D.W., Bachvaroff T., Handy S.M., Kim S., Garate-Lizarraga I., Delwiche C.F.</div>
-          <div class="pub-item-journal"><em>CICIMAR Oceánides</em>, 2008 <span class="pub-badge non-sci">Non-SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites molecular">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[48]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Genetic%20diversity%20of%20the%20parasitic%20dinoflagellate%20in%20the%20genus%20Amoebophrya%20and%20its%20relationship%20to%20parasite%20biology%20and%20biogeography%20Kim%20S." target="_blank" rel="noopener">Genetic diversity of the parasitic dinoflagellate in the genus <em>Amoebophrya</em> and its relationship to parasite biology and biogeography</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., Kim K.Y., Kim C.H., Yih W., Park J.S., Coats D.W.</div>
-          <div class="pub-item-journal"><em>Journal of Eukaryotic Microbiology</em>, 2008 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="ecology dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[49]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Growth%20and%20grazing%20responses%20of%20the%20mixotrophic%20dinoflagellate%20Dinophysis%20acuminata%20as%20functions%20of%20light%20intensity%20and%20prey%20concentration%20Kim%20S." target="_blank" rel="noopener">Growth and grazing responses of the mixotrophic dinoflagellate <em>Dinophysis acuminata</em> as functions of light intensity and prey concentration</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., Kang Y.G., Kim H.S., Yih W.</div>
-          <div class="pub-item-journal"><em>Aquatic Microbial Ecology</em>, 2008 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2007 -->
-      <div class="pub-year-group fade-in" data-y="2007">
-        <div class="pub-year-header">2007</div>
-
-        <div class="pub-item" data-topic="ecology">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[50]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Seasonal%20variations%20in%20phytoplankton%20growth%20and%20microzooplankton%20grazing%20in%20a%20temperate%20coastal%20embayment%2C%20Korea%20Kim%20S." target="_blank" rel="noopener">Seasonal variations in phytoplankton growth and microzooplankton grazing in a temperate coastal embayment, Korea</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., Moon C., Shin K., Chang M.</div>
-          <div class="pub-item-journal"><em>Estuarine, Coastal and Shelf Science</em>, 2007 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2006 -->
-      <div class="pub-year-group fade-in" data-y="2006">
-        <div class="pub-year-header">2006</div>
-
-        <div class="pub-item" data-topic="dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[51]</span>
-          <div class="pub-item-title"><a href="https://doi.org/10.3354/ame045101" target="_blank" rel="noopener">First successful culture of the marine dinoflagellate <em>Dinophysis acuminata</em></a></div>
-          <div class="pub-item-authors">Park M.G., Kim S., et al.</div>
-          <div class="pub-item-journal"><em>Aquatic Microbial Ecology</em>, 45(2):101–106, 2006 <span class="pub-badge">SCI</span></div>
-        </div>
-
-        <div class="pub-item" data-topic="parasites ecology dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[52]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Patterns%20in%20host%20range%20for%20two%20strains%20of%20Amoebophrya%20%28Dinophyta%29%20infecting%20the%20thecate%20dinoflagellates%20Alexandrium%20affine%20and%20Gonyaulax%20polygramma%20Kim%20S." target="_blank" rel="noopener">Patterns in host range for two strains of <em>Amoebophrya</em> (Dinophyta) infecting the thecate dinoflagellates <em>Alexandrium affine</em> and <em>Gonyaulax polygramma</em></a></div>
-          <div class="pub-item-authors">Kim S.</div>
-          <div class="pub-item-journal"><em>Journal of Phycology</em>, 2006 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2004 -->
-      <div class="pub-year-group fade-in" data-y="2004">
-        <div class="pub-year-header">2004</div>
-
-        <div class="pub-item" data-topic="parasites ecology dino">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[53]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Infection%20of%20the%20bloom-forming%20thecate%20dinoflagellates%20Alexandrium%20affine%20and%20Gonyaulax%20polygramma%20by%20two%20strain%20Amoebophrya%20%28Dinophyta%29%20Kim%20S." target="_blank" rel="noopener">Infection of the bloom-forming thecate dinoflagellates <em>Alexandrium affine</em> and <em>Gonyaulax polygramma</em> by two strain <em>Amoebophrya</em> (Dinophyta)</a></div>
-          <div class="pub-item-authors">Kim S., Park M.G., Yih W., Coats D.W.</div>
-          <div class="pub-item-journal"><em>Journal of Phycology</em>, 2004 <span class="pub-badge">SCI</span></div>
-        </div>
-
-      </div>
-
-      <!-- 2003 -->
-      <div class="pub-year-group fade-in" data-y="2003">
-        <div class="pub-year-header">2003</div>
-
-        <div class="pub-item" data-topic="ecology">
-          <span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[54]</span>
-          <div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Effects%20of%20benzo%5Ba%5Dpyrene%20on%20growth%20and%20photosynthetic%20performance%20of%20phytoplankton%20Kim%20S." target="_blank" rel="noopener">Effects of benzo[a]pyrene on growth and photosynthetic performance of phytoplankton</a></div>
-          <div class="pub-item-authors">Kim S., Shin K., Moon C., Chang M.</div>
-          <div class="pub-item-journal"><em>Korean Journal of Environmental Biology</em>, 2003 <span class="pub-badge non-sci">KCI</span></div>
-        </div>
-
-      </div>
-
-    </div>
-  </main>
-
-  <footer>
-    <div style="max-width:1280px; margin:0 auto; padding:32px 0;">
-      <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.07); padding-top:28px;">
-        <span>© 2026 해양부유생물학연구실 · 부경대학교 · 총 54편 논문</span>
-        <a href="../index.html" style="color:var(--accent2);">← 메인으로 돌아가기</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+<div class="pub-item-authors">Kim S., Kim H.S., Kang Y.G., Park M.G.</div>
+<div class="pub-item-journal"><em>Ocean and Polar Research</em>, 37(3):201–209, 2015</div>
+</div>
+<div class="pub-item" data-topic="dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[32]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.4490/algae.2015.30.1.035" rel="noopener" target="_blank">Obligate mixotrophy of the pigmented dinoflagellate <em>Polykrikos lebourae</em></a></div>
+<div class="pub-item-authors">Kim S., Yoon J., Park M.G.</div>
+<div class="pub-item-journal"><em>Algae</em>, 30(1):35–47, 2015 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[33]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2015.01.006" rel="noopener" target="_blank">Phased cell division and facultative mixotrophy of <em>Fragilidium duplocampanaeforme</em></a></div>
+<div class="pub-item-authors">Park M.G., Kim M., Kim S.</div>
+<div class="pub-item-journal"><em>Harmful Algae</em>, 43:20–30, 2015 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="molecular dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[34]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Occurrence%20and%20molecular%20phylogenetic%20characteristics%20of%20benthic%20sand-dwelling%20dinoflagellates%20in%20intertidal%20flat%20of%20Dongho%2C%20west%20coast%20of%20Korea%20Kim%20S." rel="noopener" target="_blank">Occurrence and molecular phylogenetic characteristics of benthic sand-dwelling dinoflagellates in intertidal flat of Dongho, west coast of Korea</a></div>
+<div class="pub-item-authors">Kim S., Yoon J., Park M.G.</div>
+<div class="pub-item-journal"><em>The Sea</em>, 2015 <span class="pub-badge non-sci">KCI</span></div>
+</div>
+</div>
+<!-- 2014 -->
+<div class="pub-year-group fade-in" data-y="2014">
+<div class="pub-year-header">2014</div>
+<div class="pub-item" data-topic="molecular dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[35]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.4467/16890027AP.14.004.1437" rel="noopener" target="_blank">The acquisition of plastids/phototrophy in heterotrophic dinoflagellates</a></div>
+<div class="pub-item-authors">Park M.G., Kim M., Kim S.</div>
+<div class="pub-item-journal"><em>Acta Protozoologica</em>, 53:39–50, Jan 2014</div>
+</div>
+<div class="pub-item" data-topic="parasites molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[36]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1111/jeu.12093" rel="noopener" target="_blank"><em>Amoebophrya</em> spp. from the bloom-forming dinoflagellate <em>Cochlodinium polykrikoides</em></a></div>
+<div class="pub-item-authors">Kim S.*, Park M.G.</div>
+<div class="pub-item-journal"><em>Journal of Eukaryotic Microbiology</em>, 61(2):161–171, Mar/Apr 2014 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="parasites dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[37]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2014.19.3.183" rel="noopener" target="_blank">Spatio-temporal distribution of the parasitic dinoflagellate <em>Amoebophrya</em> sp.</a></div>
+<div class="pub-item-authors">Kim S., Park M.G.</div>
+<div class="pub-item-journal"><em>The Sea (Journal of Korean Society of Oceanography)</em>, 19(3):183–192, 2014</div>
+</div>
+</div>
+<!-- 2013 -->
+<div class="pub-year-group fade-in" data-y="2013">
+<div class="pub-year-header">2013</div>
+<div class="pub-item" data-topic="molecular dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[38]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1371/journal.pone.0054315" rel="noopener" target="_blank">Still acting Green: Continued expression of photosynthetic genes in the heterotrophic dinoflagellate <em>Pfiesteria piscicida</em></a></div>
+<div class="pub-item-authors">Coats D.W., Kim S., et al.</div>
+<div class="pub-item-journal"><em>PLOS ONE</em>, 8(1):e54315, 2013 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="parasites hab">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[39]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1016/j.hal.2013.10.005" rel="noopener" target="_blank">Parasitism of harmful dinoflagellates in Korean coastal waters</a></div>
+<div class="pub-item-authors">Park M.G., Kim S.*, Shin E.Y., Yih W., Coats W.D.</div>
+<div class="pub-item-journal"><em>Harmful Algae</em>, 30:S62–S74, Dec 2013 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="hab">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[40]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.7850/jkso.2013.18.2.101" rel="noopener" target="_blank">Red tides in Shiwa Bay, Korea in 2011</a></div>
+<div class="pub-item-authors">Kim S., Cho M.H., Park M.G.</div>
+<div class="pub-item-journal"><em>Journal of the Korean Society of Oceanography</em>, 18(2):101–110, 2013</div>
+</div>
+</div>
+<!-- 2012 -->
+<div class="pub-year-group fade-in" data-y="2012">
+<div class="pub-year-header">2012</div>
+<div class="pub-item" data-topic="parasites molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[41]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1128/AEM.01424-12" rel="noopener" target="_blank">Molecular diversity of the syndinean genus <em>Euduboscquella</em> based on single-cell PCR analysis</a></div>
+<div class="pub-item-authors">Kim S., Park M.G., et al.</div>
+<div class="pub-item-journal"><em>Applied and Environmental Microbiology</em>, 78(19):6986–6995, 2012 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="ecology dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[42]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=The%20marine%20dinoflagellate%20genus%20Dinophysis%20can%20retain%20plastids%20of%20multiple%20algal%20origins%20at%20the%20same%20time%20Kim%20M." rel="noopener" target="_blank">The marine dinoflagellate genus <em>Dinophysis</em> can retain plastids of multiple algal origins at the same time</a></div>
+<div class="pub-item-authors">Kim M., Kim S., Yih W., Park M.G.</div>
+<div class="pub-item-journal"><em>Harmful Algae</em>, 2012 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2011 -->
+<div class="pub-year-group fade-in" data-y="2011">
+<div class="pub-year-header">2011</div>
+<div class="pub-item" data-topic="molecular dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[43]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1093/molbev/msq332" rel="noopener" target="_blank">Dynamics of actin evolution in dinoflagellates</a></div>
+<div class="pub-item-authors">Kim S., Park M.G., et al.</div>
+<div class="pub-item-journal"><em>Molecular Biology and Evolution</em>, 28(4):1469–1480, 2011 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="dino hab">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[44]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.3354/ame01469" rel="noopener" target="_blank">Feeding behavior of the thecate mixotrophic dinoflagellate <em>Oxyphysis oxytoxoides</em></a></div>
+<div class="pub-item-authors">Kim S., Park M.G., et al.</div>
+<div class="pub-item-journal"><em>Aquatic Microbial Ecology</em>, 62(3):279–287, 2011 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2010 -->
+<div class="pub-year-group fade-in" data-y="2010">
+<div class="pub-year-header">2010</div>
+<div class="pub-item" data-topic="parasites molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[45]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1111/j.1550-7408.2010.00501.x" rel="noopener" target="_blank"><em>Tintinnophagus acutus</em> n. g., n. sp. (Phylum Ciliophora), a Parasite of Tintinnid Ciliates</a></div>
+<div class="pub-item-authors">Kim S., Park M.G., et al.</div>
+<div class="pub-item-journal"><em>Journal of Eukaryotic Microbiology</em>, 57(6):468–482, 2010 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="dino molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[46]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.1111/j.1529-8817.2009.00790.x" rel="noopener" target="_blank">Does <em>Dinophysis caudata</em>... have permanent plastids?</a></div>
+<div class="pub-item-authors">Kim S., Park M.G., et al.</div>
+<div class="pub-item-journal"><em>Journal of Phycology</em>, 46(2):236–242, 2010 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2009 -->
+<div class="pub-year-group fade-in" data-y="2009">
+<div class="pub-year-header">2009</div>
+<div class="pub-item" data-topic="molecular dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[47]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Phylogeny%20of%20four%20dinophysiacean%20genera%20%28Dinophyceae%2C%20Dinophysiales%29%20based%20on%20rDNA%20sequences%20from%20single%20cells%20and%20environmental%20samples%20Handy%20S.M." rel="noopener" target="_blank">Phylogeny of four dinophysiacean genera (Dinophyceae, Dinophysiales) based on rDNA sequences from single cells and environmental samples</a></div>
+<div class="pub-item-authors">Handy S.M., Bachvaroff T.R., Timme R., Coats D.W., Kim S., Delwiche C.F.</div>
+<div class="pub-item-journal"><em>Journal of Phycology</em>, 2009 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="parasites ecology dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[48]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Dinoflagellate%20host-parasite%20sterol%20profiles%20dictate%20karlotoxin%20sensitivity%20Place%20A." rel="noopener" target="_blank">Dinoflagellate host-parasite sterol profiles dictate karlotoxin sensitivity</a></div>
+<div class="pub-item-authors">Place A., Bai X., Kim S., Sengco M., Coats D.W.</div>
+<div class="pub-item-journal"><em>Journal of Phycology</em>, 2009 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2008 -->
+<div class="pub-year-group fade-in" data-y="2008">
+<div class="pub-year-header">2008</div>
+<div class="pub-item" data-topic="parasites molecular dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[49]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Prevalence%20and%20phylogeny%20of%20parasitic%20dinoflagellates%20%28Genus%20Blastodinium%29%20infecting%20copepods%20in%20the%20Gulf%20of%20California%20Coats%20D.W." rel="noopener" target="_blank">Prevalence and phylogeny of parasitic dinoflagellates (Genus <em>Blastodinium</em>) infecting copepods in the Gulf of California</a></div>
+<div class="pub-item-authors">Coats D.W., Bachvaroff T., Handy S.M., Kim S., Garate-Lizarraga I., Delwiche C.F.</div>
+<div class="pub-item-journal"><em>CICIMAR Oceánides</em>, 2008 <span class="pub-badge non-sci">Non-SCI</span></div>
+</div>
+<div class="pub-item" data-topic="parasites molecular">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[50]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Genetic%20diversity%20of%20the%20parasitic%20dinoflagellate%20in%20the%20genus%20Amoebophrya%20and%20its%20relationship%20to%20parasite%20biology%20and%20biogeography%20Kim%20S." rel="noopener" target="_blank">Genetic diversity of the parasitic dinoflagellate in the genus <em>Amoebophrya</em> and its relationship to parasite biology and biogeography</a></div>
+<div class="pub-item-authors">Kim S., Park M.G., Kim K.Y., Kim C.H., Yih W., Park J.S., Coats D.W.</div>
+<div class="pub-item-journal"><em>Journal of Eukaryotic Microbiology</em>, 2008 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="ecology dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[51]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Growth%20and%20grazing%20responses%20of%20the%20mixotrophic%20dinoflagellate%20Dinophysis%20acuminata%20as%20functions%20of%20light%20intensity%20and%20prey%20concentration%20Kim%20S." rel="noopener" target="_blank">Growth and grazing responses of the mixotrophic dinoflagellate <em>Dinophysis acuminata</em> as functions of light intensity and prey concentration</a></div>
+<div class="pub-item-authors">Kim S., Park M.G., Kang Y.G., Kim H.S., Yih W.</div>
+<div class="pub-item-journal"><em>Aquatic Microbial Ecology</em>, 2008 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2007 -->
+<div class="pub-year-group fade-in" data-y="2007">
+<div class="pub-year-header">2007</div>
+<div class="pub-item" data-topic="ecology">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[52]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Seasonal%20variations%20in%20phytoplankton%20growth%20and%20microzooplankton%20grazing%20in%20a%20temperate%20coastal%20embayment%2C%20Korea%20Kim%20S." rel="noopener" target="_blank">Seasonal variations in phytoplankton growth and microzooplankton grazing in a temperate coastal embayment, Korea</a></div>
+<div class="pub-item-authors">Kim S., Park M.G., Moon C., Shin K., Chang M.</div>
+<div class="pub-item-journal"><em>Estuarine, Coastal and Shelf Science</em>, 2007 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2006 -->
+<div class="pub-year-group fade-in" data-y="2006">
+<div class="pub-year-header">2006</div>
+<div class="pub-item" data-topic="dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[53]</span>
+<div class="pub-item-title"><a href="https://doi.org/10.3354/ame045101" rel="noopener" target="_blank">First successful culture of the marine dinoflagellate <em>Dinophysis acuminata</em></a></div>
+<div class="pub-item-authors">Park M.G., Kim S., et al.</div>
+<div class="pub-item-journal"><em>Aquatic Microbial Ecology</em>, 45(2):101–106, 2006 <span class="pub-badge">SCI</span></div>
+</div>
+<div class="pub-item" data-topic="parasites ecology dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[54]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Patterns%20in%20host%20range%20for%20two%20strains%20of%20Amoebophrya%20%28Dinophyta%29%20infecting%20the%20thecate%20dinoflagellates%20Alexandrium%20affine%20and%20Gonyaulax%20polygramma%20Kim%20S." rel="noopener" target="_blank">Patterns in host range for two strains of <em>Amoebophrya</em> (Dinophyta) infecting the thecate dinoflagellates <em>Alexandrium affine</em> and <em>Gonyaulax polygramma</em></a></div>
+<div class="pub-item-authors">Kim S.</div>
+<div class="pub-item-journal"><em>Journal of Phycology</em>, 2006 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2004 -->
+<div class="pub-year-group fade-in" data-y="2004">
+<div class="pub-year-header">2004</div>
+<div class="pub-item" data-topic="parasites ecology dino">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[55]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Infection%20of%20the%20bloom-forming%20thecate%20dinoflagellates%20Alexandrium%20affine%20and%20Gonyaulax%20polygramma%20by%20two%20strain%20Amoebophrya%20%28Dinophyta%29%20Kim%20S." rel="noopener" target="_blank">Infection of the bloom-forming thecate dinoflagellates <em>Alexandrium affine</em> and <em>Gonyaulax polygramma</em> by two strain <em>Amoebophrya</em> (Dinophyta)</a></div>
+<div class="pub-item-authors">Kim S., Park M.G., Yih W., Coats D.W.</div>
+<div class="pub-item-journal"><em>Journal of Phycology</em>, 2004 <span class="pub-badge">SCI</span></div>
+</div>
+</div>
+<!-- 2003 -->
+<div class="pub-year-group fade-in" data-y="2003">
+<div class="pub-year-header">2003</div>
+<div class="pub-item" data-topic="ecology">
+<span style="color:var(--text-light); font-size:0.78rem; font-family:'Outfit',sans-serif; font-weight:700;">[56]</span>
+<div class="pub-item-title"><a href="https://scholar.google.com/scholar?q=Effects%20of%20benzo%5Ba%5Dpyrene%20on%20growth%20and%20photosynthetic%20performance%20of%20phytoplankton%20Kim%20S." rel="noopener" target="_blank">Effects of benzo[a]pyrene on growth and photosynthetic performance of phytoplankton</a></div>
+<div class="pub-item-authors">Kim S., Shin K., Moon C., Chang M.</div>
+<div class="pub-item-journal"><em>Korean Journal of Environmental Biology</em>, 2003 <span class="pub-badge non-sci">KCI</span></div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div style="max-width:1280px; margin:0 auto; padding:32px 0;">
+<div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.07); padding-top:28px;">
+<span>© 2026 해양부유생물학연구실 · 부경대학교 · 총 56편 논문 및 저서</span>
+<a href="../index.html" style="color:var(--accent2);">← 메인으로 돌아가기</a>
+</div>
+</div>
+</footer>
+<script>
     const nb = document.getElementById('navbar');
     window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
     const t2 = document.getElementById('nav-toggle'), n2 = document.getElementById('nav-links');
@@ -648,5 +552,4 @@
     }
   </script>
 </body>
-
 </html>

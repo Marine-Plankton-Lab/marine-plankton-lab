@@ -126,3 +126,21 @@
   padding: 2px 9px; border-radius: 12px; font-size: 0.72rem; font-weight: 700;
   margin-left: 8px; font-style: normal; font-family: 'Outfit', sans-serif;
 }
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 90px 5% 40px;
+    min-height: 220px;
+  }
+  .pub-filter-bar {
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+  .pub-filter-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+  .pub-item {
+    padding: 16px 16px;
+  }
+}
